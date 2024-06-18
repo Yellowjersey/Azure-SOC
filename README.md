@@ -1,5 +1,5 @@
 # Building a SOC + Honeynet in Azure (Live Traffic)
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+![Honeynet + SOC](https://github.com/Yellowjersey/Azure-SOC/assets/1338486/47677586-b72b-4fec-88ca-c0c0392efa66)
 
 ## Introduction
 
@@ -13,6 +13,7 @@ In this project, I build a mini honeynet in Azure and ingest log sources from va
 
 ## Architecture Before Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
+
 
 ## Architecture After Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
@@ -32,9 +33,10 @@ For the "BEFORE" metrics, all resources were originally deployed, exposed to the
 For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+![nsg-malicious-allowed-in-map before securing](https://github.com/Yellowjersey/Azure-SOC/assets/1338486/53747226-2014-4f18-a2b1-059b5586da85)<br>
+![linux-ssh-auth-fail-map before securing](https://github.com/Yellowjersey/Azure-SOC/assets/1338486/6030b8ab-a366-4ca2-bdfa-b16526d60f29)<br>
+
+![windows-rdp-auth-fail-map before securing](https://github.com/Yellowjersey/Azure-SOC/assets/1338486/c2df9fdc-f7e6-4c0c-8f72-1a6401910fa2)<br>
 
 ## Metrics Before Hardening / Security Controls
 
@@ -44,11 +46,11 @@ Stop Time 2023-03-16 17:04:29
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+| SecurityEvent            | 3626
+| Syslog                   | 888
+| SecurityAlert            | 1
+| SecurityIncident         | 35
+| AzureNetworkAnalytics_CL | 171
 
 ## Attack Maps Before Hardening / Security Controls
 
@@ -62,10 +64,10 @@ Stop Time	2023-03-19 15:37
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778
-| Syslog                   | 25
-| SecurityAlert            | 0
-| SecurityIncident         | 0
+| SecurityEvent            | 110
+| Syslog                   | 344
+| SecurityAlert            | 1
+| SecurityIncident         | 2
 | AzureNetworkAnalytics_CL | 0
 
 ## Conclusion
